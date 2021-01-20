@@ -666,13 +666,12 @@ class MiniGraphCard extends LitElement {
     }
     const dec = this.config.decimals;
     const value_factor = 10 ** this.config.value_factor;
-    const multiplier = this.config.multiplier;
 
     if (dec === undefined || Number.isNaN(dec) || Number.isNaN(state))
-      return Math.round(state * multiplier * value_factor * 100) / 100;
+      return Math.round(state * this.config.multiplier * value_factor * 100) / 100;
 
     const x = 10 ** dec;
-    return (Math.round(state * multiplier * value_factor * x) / x).toFixed(dec);
+    return (Math.round(state * this.config.multiplier * value_factor * x) / x).toFixed(dec);
   }
 
   updateOnInterval() {

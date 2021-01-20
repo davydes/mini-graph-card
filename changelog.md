@@ -1,3 +1,8 @@
+## v0.10.1
+
+### ✨ NEW
+- Support multiplication of state
+
 ## v0.10.0
 
 ### ✨ NEW
